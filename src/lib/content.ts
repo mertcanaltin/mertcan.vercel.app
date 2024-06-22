@@ -1,4 +1,4 @@
-export const githubImage = 'https://github.com/anonrig.png'
+export const githubImage = 'https://github.com/mertcanaltin.png'
 export const twitterId = '1589638196'
 export const twitterUsername = 'mecaltin'
 export const twitterUrl = `https://twitter.com/${twitterUsername}`

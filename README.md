@@ -6,7 +6,7 @@ This repository contains the source code and content of my personal blog, [mertc
 
 To run the blog on your local machine, you need to have Node.js and npm installed. Then, follow these steps:
 
-1. Clone this repository: `git clone https://github.com/anonrig/mertcan.vercel.app.git`
+1. Clone this repository: `git clone https://github.com/mertcanaltin/mertcan.vercel.app.git`
 2. Install the dependencies: `pnpm install`
 3. Start the development server: `pnpm run dev`
 4. Open your browser and go to http://localhost:3000 to see the blog.

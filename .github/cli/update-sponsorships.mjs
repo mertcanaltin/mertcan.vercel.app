@@ -1,4 +1,4 @@
-// Go to https://github.com/sponsors/anonrig/dashboard/your_sponsors
+// Go to https://github.com/sponsors/mertcanaltin/dashboard/your_sponsors
 // Click to Export button and save it to .github/sponsorships.json
 
 import fs from 'node:fs'
@@ -41,7 +41,7 @@ export async function updateSponsorships() {
 
   if (should_open_github) {
     s.start('Opening GitHub Sponsors dashboard...')
-    await open('https://github.com/sponsors/anonrig/dashboard/your_sponsors')
+    await open('https://github.com/sponsors/mertcanaltin/dashboard/your_sponsors')
     s.stop('Github sponsors dashboard opened.')
   }
 
@@ -90,7 +90,7 @@ type: Page
 
 Thanks to the supporters below, I have the chance to contribute to Node.js and
 improve the performance of critical paths. If you didn't sponsor me yet, you can
-do it from [GitHub Sponsors](https://github.com/sponsors/anonrig).
+do it from [GitHub Sponsors](https://github.com/sponsors/mertcanaltin).
 
 ## Platinum
 
