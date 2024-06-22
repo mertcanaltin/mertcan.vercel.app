@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets'
 import { getCollection } from 'astro:content'
-import familyImg from '@/assets/family.png'
+import familyImg from '@/assets/family.jpeg'
 import BlogRow from '@/components/BlogRow.astro'
 import SubscribeButton from '@/components/SubscribeButton.astro'
 import Container from '@/components/ui/Container.astro'
@@ -17,7 +17,7 @@ posts.sort((a, b) => compareDesc(a.data.date, b.data.date))
     <div class="mx-auto mb-4 flex max-w-lg flex-col items-center text-center">
       <div class="relative mb-8">
         <Image
-          alt="Engineering with Yagiz"
+          alt="Engineering with Mert"
           src={familyImg}
           width={150}
           height={150}
@@ -25,7 +25,7 @@ posts.sort((a, b) => compareDesc(a.data.date, b.data.date))
           class="rounded-full"
         />
       </div>
-      <h1 class="sr-only">Yagiz Nizipli's website</h1>
+      <h1 class="sr-only">Mert Can Altin's website</h1>
       <div class="text-lg dark:text-zinc-200">
         Here's a collection of posts about my thoughts, stories, ideas and
         experiences as a human, and an engineer working with different

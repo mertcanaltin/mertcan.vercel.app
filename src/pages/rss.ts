@@ -16,7 +16,7 @@ export async function GET(): Promise<ReturnType<APIRoute>> {
 <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
 <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
 <language>en-us</language>
-<copyright>Yagiz Nizipli - yagiz.co</copyright>
+<copyright>Mert Can Altin - mertcan.vercel.app</copyright>
 `,
     items: posts.map((post): RSSFeedItem => {
       return {
@@ -25,7 +25,7 @@ export async function GET(): Promise<ReturnType<APIRoute>> {
         customData: `<guid>${`/${post.slug}`}</guid>`,
         link: `/${post.slug}`,
         pubDate: post.data.date,
-        author: 'Yagiz Nizipli',
+        author: 'Mert Can Altin',
       }
     }),
   })

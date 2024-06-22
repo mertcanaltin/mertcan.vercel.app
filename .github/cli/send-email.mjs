@@ -51,11 +51,11 @@ export async function sendEmail() {
       (raw) => {
         const handle = Handlebars.compile(raw)
         return handle({
-          heading: 'Engineering with Yagiz',
-          imageUrl: 'https://www.yagiz.co/family.png',
+          heading: 'Engineering with Mert',
+          imageUrl: 'https://www.mertcan.vercel.app/family.jpeg',
           title: blog.data.title,
           description: blog.data.description,
-          url: `https://www.yagiz.co/${blog.slug}`,
+          url: `https://www.mertcan.vercel.app/${blog.slug}`,
         })
       },
     ],
@@ -105,8 +105,8 @@ export async function sendEmail() {
     Messages: [
       {
         From: {
-          Email: 'newsletter@yagiz.co',
-          Name: 'Engineering with Yagiz',
+          Email: 'mertgold60@gmail.com',
+          Name: 'Engineering with Mert',
         },
         To: [
           {
@@ -115,8 +115,8 @@ export async function sendEmail() {
         ],
         Bcc: [
           {
-            Email: 'yagiz@nizipli.com',
-            Name: 'Yagiz Nizipli',
+            Email: 'mertgold60@gmail.com',
+            Name: 'Mert Can Altin',
           },
         ],
         Subject: `New post: ${blog.data.title}`,

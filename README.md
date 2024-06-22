@@ -1,12 +1,12 @@
-## yagiz.co
+## mertcan.vercel.app
 
-This repository contains the source code and content of my personal blog, [yagiz.co](https://www.yagiz.co). The blog is built with [Astro](https://astro.build) and styled with [Tailwind CSS](https://tailwindcss.com).
+This repository contains the source code and content of my personal blog, [mertcan.vercel.app](https://www.mertcan.vercel.app). The blog is built with [Astro](https://astro.build) and styled with [Tailwind CSS](https://tailwindcss.com).
 
 ### Getting started
 
 To run the blog on your local machine, you need to have Node.js and npm installed. Then, follow these steps:
 
-1. Clone this repository: `git clone https://github.com/anonrig/yagiz.co.git`
+1. Clone this repository: `git clone https://github.com/anonrig/mertcan.vercel.app.git`
 2. Install the dependencies: `pnpm install`
 3. Start the development server: `pnpm run dev`
 4. Open your browser and go to http://localhost:3000 to see the blog.
@@ -17,4 +17,4 @@ I welcome any feedback, suggestions, and contributions to my blog. If you find a
 
 ### Contact
 
-If you have any questions or comments, feel free to contact me via [contact page](https://www.yagiz.co/contact) or [Twitter](https://twitter.com/yagiznizipli). I'm always happy to chat with fellow developers and bloggers.
+If you have any questions or comments, feel free to contact me via [contact page](https://www.mertcan.vercel.app/contact) or [Twitter](https://twitter.com/mecaltin). I'm always happy to chat with fellow developers and bloggers.
