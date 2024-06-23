@@ -24,7 +24,7 @@ body {
 
 .prose a {
   @apply transition-all decoration-orange-400 underline-offset-2 decoration-[0.1em];
-  @apply font-bold text-orange-400 underline;
+  @apply font-bold text-green-600 underline;
 }
 
 .prose .anchor:after {

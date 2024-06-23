@@ -1,45 +1,69 @@
 ---
-import { Image } from 'astro:assets'
-import { getCollection } from 'astro:content'
-import familyImg from '@/assets/family.jpeg'
-import BlogRow from '@/components/BlogRow.astro'
-import SubscribeButton from '@/components/SubscribeButton.astro'
-import Container from '@/components/ui/Container.astro'
-import Layout from '@/layouts/Layout.astro'
-import { compareDesc } from 'date-fns'
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+import familyImg from "@/assets/family.jpeg";
+import BlogRow from "@/components/BlogRow.astro";
+import SubscribeSection from "@/components/SubscribeSection.astro";
+import Container from "@/components/ui/Container.astro";
+import Layout from "@/layouts/Layout.astro";
+import { compareDesc } from "date-fns";
 
-const posts = await getCollection('blog', ({ data }) => data.status === 'published')
-posts.sort((a, b) => compareDesc(a.data.date, b.data.date))
+const posts = await getCollection(
+  "blog",
+  ({ data }) => data.status === "published"
+);
+posts.sort((a, b) => compareDesc(a.data.date, b.data.date));
 ---
 
 <Layout>
   <Container class="-mt-8">
-    <div class="mx-auto mb-4 flex max-w-lg flex-col items-center text-center">
-      <div class="relative mb-8">
-        <Image
-          alt="Engineering with Mert"
-          src={familyImg}
-          width={150}
-          height={150}
-          loading="eager"
-          class="rounded-full"
-        />
-      </div>
-      <h1 class="sr-only">Mert Can Altin's website</h1>
-      <div class="text-lg dark:text-zinc-200">
-      Welcome to my personal space! Here you'll find a collection of my thoughts, stories, ideas, and experiences. I am Mert Can Altın, working at Trendyol with a passion for technology and innovation.
+    <div
+      class="flex flex-col md:flex-row md:space-x-8"
+    >
+      <div
+        class="mx-auto mb-4 flex max-w-lg flex-col items-center text-center md:max-w-full md:flex-row md:items-start md:text-left md:w-1/2"
+      >
+        <div class="relative mb-8 md:mb-0 md:mr-8 md:flex-shrink-0">
+          <Image
+            alt="Engineering with Mert"
+            src={familyImg}
+            width={150}
+            height={150}
+            loading="eager"
+            class="rounded-full border-4 border-primary"
+          />
+        </div>
+        <div class="text-lg dark:text-zinc-200 md:flex-grow">
+          <h1 class="sr-only">Mert Can Altin's website</h1>
+          <p>
+            Welcome to my personal space! Here you'll find a collection of my
+            thoughts, stories, ideas, and experiences. I am Mert Can Altın,
+            working at Trendyol with a passion for technology and innovation.
+          </p>
+        </div>
       </div>
 
-      <SubscribeButton />
+      <SubscribeSection />
     </div>
   </Container>
-
-  <div class="flex grow pt-8">
-    <Container
-      size="tight"
-      class="divide-y divide-slate-200 dark:divide-neutral-700"
-    >
-      {posts.map((post) => <BlogRow {post} />)}
-    </Container>
-  </div>
+  <Container class="mt-8">
+    <div class="md:flex md:space-x-8">
+      <div class="w-full md:w-3/3">
+        <div class="border rounded-lg p-4 bg-white dark:bg-zinc-800">
+          <h2 class="text-xl font-bold mb-4">My Writings</h2>
+          <ul class="space-y-4">
+            {
+              posts.map((post) => (
+                <li key={post}>
+                  {posts.map((post) => (
+                    <BlogRow {post} />
+                  ))}
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+  </Container>
 </Layout>
