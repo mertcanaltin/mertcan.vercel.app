@@ -54,11 +54,11 @@ posts.sort((a, b) => compareDesc(a.data.date, b.data.date));
           <ul class="space-y-4">
             {
               posts.map((post) => (
-                <li key={post}>
+                <div>
                   {posts.map((post) => (
                     <BlogRow {post} />
                   ))}
-                </li>
+                </div>
               ))
             }
           </ul>
