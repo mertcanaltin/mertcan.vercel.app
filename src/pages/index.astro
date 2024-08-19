@@ -52,15 +52,11 @@ posts.sort((a, b) => compareDesc(a.data.date, b.data.date));
         <div class="border rounded-lg p-4 bg-white dark:bg-zinc-800">
           <h2 class="text-xl font-bold mb-4 dark:text-white">My Writings</h2>
           <ul class="space-y-4">
-            {
-              posts.map((post) => (
-                <div>
-                  {posts.map((post) => (
-                    <BlogRow {post} />
-                  ))}
-                </div>
-              ))
-            }
+            <div>
+              {posts.map((post) => (
+                <BlogRow {post} />
+              ))}
+            </div>
           </ul>
         </div>
       </div>
