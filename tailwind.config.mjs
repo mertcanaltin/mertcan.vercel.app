@@ -1,6 +1,8 @@
-const navigation_height = '80px'
+const navigation_height = '80px';
 
 /** @type {import('tailwindcss').Config} */
+import typography from '@tailwindcss/typography';
+
 export default {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
@@ -44,5 +46,5 @@ export default {
   future: {
     hoverOnlyWhenSupported: true,
   },
-  plugins: [require('@tailwindcss/typography')],
-}
+  plugins: [typography],
+};
