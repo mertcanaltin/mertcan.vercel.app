@@ -1,13 +1,12 @@
-
 ---
-title: 'How to Log Both JavaScript and C++ in Node.js Using LLDB'
-description: >-
-  Learn how to debug Node.js applications by logging in both JavaScript and C++ layers using LLDB.
-type: Blog
+title: "How to Log Both JavaScript and C++ in Node.js Using LLDB"
+description: "Learn how to debug Node.js applications by logging in both JavaScript and C++ layers using LLDB."
 date: '2024-12-31'
+type: Blog
 tag: coding
 status: published
 ---
+
 
 ## Introduction
 
@@ -38,6 +37,10 @@ In Node.js core, you can use `std::cout` to log messages in the C++ layer. For e
 std::cout << "read in c++" << std::endl;
 ```
 
+example:
+
+![added log in c++](https://i.hizliresim.com/jmds721.png)
+
 This log will print whenever the related C++ function is executed, helping you trace the flow in the native layer.
 
 ---
@@ -49,6 +52,10 @@ In the JavaScript layer, you can add logs using `console.log`. For example:
 ```javascript
 console.log('read in js');
 ```
+
+example:
+
+![added log in js](https://i.hizliresim.com/q0ofm1z.png)
 
 This will log messages to the console whenever this part of the JavaScript code is executed.
 
