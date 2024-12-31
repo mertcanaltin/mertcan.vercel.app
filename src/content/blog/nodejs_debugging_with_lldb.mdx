@@ -37,9 +37,21 @@ In Node.js core, you can use `std::cout` to log messages in the C++ layer. For e
 std::cout << "read in c++" << std::endl;
 ```
 
+
+path: `node/src/node_file.cc`
+
 example:
 
-![added log in c++](https://i.hizliresim.com/jmds721.png)
+```c++
+static void Read(const FunctionCallbackInfo<Value>& args) {
+  Environment* env = Environment::GetCurrent(args);
+
+  std::cout << "read in c++" << std::endl; // Added log
+  
+  const int argc = args.Length();
+  CHECK_GE(argc, 5);
+
+```
 
 This log will print whenever the related C++ function is executed, helping you trace the flow in the native layer.
 
@@ -53,9 +65,19 @@ In the JavaScript layer, you can add logs using `console.log`. For example:
 console.log('read in js');
 ```
 
+path: `lib/fs.js`
+
 example:
 
-![added log in js](https://i.hizliresim.com/q0ofm1z.png)
+```javascript
+function read(fd, buffer, offsetOrOptions, length, position, callback) {
+  fd = getValidatedFd(fd);
+
+   console.log('read in js'); // Added log
+
+  let offset = offsetOrOptions;
+  let params = null;
+```
 
 This will log messages to the console whenever this part of the JavaScript code is executed.
 
